@@ -84,7 +84,10 @@ k. Display employees who work for the Sales department.
 
 
 l. Display details of employees who either have the same job description as that of
-JONES or whose salary greater or equal to that of FORD.
+JONES 
+
+or whose salary greater or equal to that of FORD.
+
 
 
 m. Display details of employees whose job description is among the job descriptions
