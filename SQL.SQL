@@ -21,37 +21,84 @@ b. Display details of employees who work either as clerks for dept. 10 or as man
 
 SELECT *
 FROM EMP
-WHERE (JOB = 'CLERK') OR (JOB = 'MANAGER');
+WHERE (JOB = 'CLERK') 
+AND (DEPTNO = 10)
+OR (JOB = 'MANAGER');
 
 c. Display details of employees who do not work as managers or for dept. 20.
+
+SELECT *
+FROM EMP
+WHERE (JOB != 'MANAGER') 
+OR (DEPTNO = '20');
 
 
 d. Display details of employees whose employee numbers are between 7500 and 7799
 inclusive, and who work either for dept. 30 or for dept. 10.
 
+SELECT *
+FROM EMP
+WHERE (EMPNO >= 7500 AND EMPNO <= 7799)
+AND (DEPTNO = 30 OR DEPTNO = 10);
+
+
 e. Display employees who earn more than 1200 in commission or salary.
+
+SELECT *
+FROM EMP
+WHERE (COMM > 1200)
+OR (SAL > 1200);
 
 f. Display the employees whose combined earnings is more than 1500.
 
+SELECT *
+FROM EMP
+WHERE (COMM + SAL > 1500);
+
 g. Display details of employees whose empno value is less than that of their manager's.
+
+SELECT empno, mgr
+FROM EMP
+WHERE EMPNO < MGR;
 
 h. Display details of employees whose names are four letters long.
 
+SELECT *
+FROM EMP
+WHERE ENAME LIKE '____';
+
 i. Display details of employees whose names do not contain the letter ‘R’.
+
+SELECT *
+FROM EMP
+WHERE ENAME NOT LIKE '%R%';
 
 j. Display names of employees, whose name the penultimate character is ‘E’.
 
+SELECT *
+FROM EMP
+WHERE ENAME LIKE '%E';
+
 k. Display employees who work for the Sales department.
+
+
 
 l. Display details of employees who either have the same job description as that of
 JONES or whose salary greater or equal to that of FORD.
 
+
 m. Display details of employees whose job description is among the job descriptions
 of employees working for a department located in CHICAGO.
 
+
+
 n. Display details of employees who work in N.Y. or CHICAGO.
 
+
+
 o. Display details of employees in grade 3 who work in CHICAGO.
+
+
 
 p. Display details of employees in grade 3 or 4, who work in N.Y. or CHICAGO, whose
 job description is SALESMAN and whose name contains the letter “N”.
